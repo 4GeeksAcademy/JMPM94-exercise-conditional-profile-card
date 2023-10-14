@@ -29,6 +29,34 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
+  if (variables.name === null) {
+    variables.name = "Manuel";
+  }
+  if (variables.lastName === null) {
+    variables.lastName = " Ponte";
+  }
+  if (variables.role === null) {
+    variables.role = "Administrativo";
+  }
+  if (variables.country === null) {
+    variables.country = "R. D. Congo";
+  }
+  if (variables.city === null) {
+    variables.city = "Kinsasa";
+  }
+  if (variables.twitter === null) {
+    variables.twitter = "";
+  }
+  if (variables.github === null) {
+    variables.github = "";
+  }
+  if (variables.linkedin === null) {
+    variables.linkedin = "";
+  }
+  if (variables.instagram === null) {
+    variables.instagram = "";
+  }
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
